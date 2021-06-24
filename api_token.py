@@ -3,6 +3,8 @@ from flask_cors import CORS
 import requests
 app = Flask(__name__)
 CORS(app)
+
+
 @app.route("/get_data", methods=["GET"])
 def test_api():
     url = "https://login.microsoftonline.com/common/oauth2/token"
@@ -25,11 +27,12 @@ def test_api():
 
     response = requests.request("GET", url, headers=headers, data=payload)
     data_json = response.json()
-    data ={'url_em':data_json['embedUrl'],
-           'id_report': data_json['id'],
-           'token': token}
+    data = {'url_em': data_json['embedUrl'],
+            'id_report': data_json['id'],
+            'token': token}
 
-    return  data
+    return data
+
 
 if __name__ == "__main__":
-    app.run(host='192.168.1.96',port=9999, debug=True)
+    app.run(host='192.168.1.96', port=9999, debug=True)

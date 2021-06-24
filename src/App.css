@@ -8,13 +8,13 @@
 }
 
 .Embed-container {
-    height: 600px;
-    width: 870px;
+    width: auto;
+    height: 500px;
 }
 
 .Embed-container-web {
-    height: 1080px;
-    width: 1920px;
+    width: auto;
+    height: 1500px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
