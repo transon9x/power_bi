@@ -6,7 +6,14 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.Embed-container {
+  height: 500px;
+  width: 870px;
+}
+.Embed-container-web {
+  height: 1080px;
+  width: 1920px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
