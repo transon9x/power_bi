@@ -12,7 +12,7 @@ function App() {
 
   useEffect(async()=> {
     const list= await axios({
-      url: 'http://192.168.1.245:9999/get_data',
+      url: 'http://192.168.1.96:9999/get_data',
       method: 'GET'
     }
     )
@@ -34,18 +34,15 @@ function App() {
                   expanded: false,
                   visible: false
                 }
+              
+                
               },
-              layoutType: models.LayoutType.MobileLandscape,
-              navContentPaneEnabled: true,
-              layoutType: models.LayoutType.Custom,
-              customLayout: {
-                displayOption: models.DisplayOption.FitToPage
-              }
-              // displayOption: models.DisplayOption.FitToPage
+              // layoutType: models.LayoutType.MobileLandscape,
+              // layoutType: models.LayoutType.MobilePortrait,
+              background: models.BackgroundType.Transparent,
               
-  
+            
               
-              // background: models.BackgroundType.Transparent,
             }
           }}
   
