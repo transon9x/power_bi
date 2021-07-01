@@ -15,6 +15,7 @@ function App() {
         });
         setData(list.data);
     }, []);
+    console.log( data.url_em)
 
     if (isMobile) {
         return ( <
@@ -33,7 +34,7 @@ function App() {
                             },
                         },
                         // layoutType: models.LayoutType.MobileLandscape,
-                        // layoutType: models.LayoutType.MobilePortrait,
+                        layoutType: models.LayoutType.MobilePortrait,
                         background: models.BackgroundType.Transparent,
                     },
                 }
@@ -67,6 +68,8 @@ function App() {
                 }
             }
             />
+            
+        
         );
     } else {
         return ( <
@@ -83,9 +86,9 @@ function App() {
                                 expanded: false,
                                 visible: false,
                             },
+                            displayOption: models.DisplayOption.FitToPage,
                         },
                     },
-                    displayOption: models.DisplayOption.FitToPage,
                 }
             }
             eventHandlers = {
@@ -116,7 +119,11 @@ function App() {
                     window.report = embeddedReport;
                 }
             }
+
+
             />
+            
+
         );
     }
 }
